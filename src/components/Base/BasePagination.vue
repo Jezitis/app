@@ -65,10 +65,7 @@ export default {
       this.$emit('update:page', pageNumber);
     },
     previousPage() {
-      if (this.page === 1) {
-        return;
-      }
-      this.$emit('update:page', this.page - 1);
+      if (this.page !== 1) this.$emit('update:page', this.page - 1);
     },
     nextPage() {
       if (this.page !== this.pages) this.$emit('update:page', this.page + 1);

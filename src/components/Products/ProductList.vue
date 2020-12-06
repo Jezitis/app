@@ -2,7 +2,7 @@
   <ul class="catalog__list">
     <product-item
       v-for="product in products"
-      :key="product.title"
+      :key="product.id"
       :product="product"
     />
   </ul>
